@@ -6,6 +6,11 @@ public class StreamMapReduceExample {
 		
 		return StudentDatabase.getAllStudents().stream()
 		.map(Student::getNotebooks).reduce(0, (a,b)->a+b);
+		//  or can be done this way
+		
+		//return StudentDatabase.getAllStudents().stream()
+		//.map(Student::getNotebooks).reduce(1,Integer::sum);
+
 	}
 	public static void main (String[] args) {
 		System.out.println(noOfNoteBooks());
